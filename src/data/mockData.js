@@ -34,3 +34,62 @@ export const recentActivity = [
     { id: 3, user: "王强", action: "已打卡", time: "08:58", type: "success" },
     { id: 4, user: "刘芳", action: "标记为缺勤", time: "10:00", type: "error" },
 ];
+
+export const notifications = [
+    {
+        id: 1,
+        type: "warning",
+        title: "迟到提醒",
+        message: "李娜于9:15打卡，迟到15分钟，请及时处理考勤记录。",
+        time: "15分钟前",
+        read: false
+    },
+    {
+        id: 2,
+        type: "success",
+        title: "考勤报表已生成",
+        message: "本周考勤报表已自动生成完毕，出勤率达96.8%。",
+        time: "1小时前",
+        read: false
+    },
+    {
+        id: 3,
+        type: "user",
+        title: "新员工入职",
+        message: "王小明已完成入职手续，请为其分配工位和设备。",
+        time: "2小时前",
+        read: false
+    },
+    {
+        id: 4,
+        type: "warning",
+        title: "缺勤异常",
+        message: "刘芳今日未打卡且未提交请假申请，请及时联系确认。",
+        time: "3小时前",
+        read: true
+    },
+    {
+        id: 5,
+        type: "info",
+        title: "系统维护通知",
+        message: "系统将于本周六凌晨2:00-4:00进行例行维护，请提前做好准备。",
+        time: "5小时前",
+        read: true
+    },
+    {
+        id: 6,
+        type: "success",
+        title: "月度总结完成",
+        message: "10月份考勤数据已汇总完成，平均出勤率为97.2%。",
+        time: "1天前",
+        read: true
+    },
+    {
+        id: 7,
+        type: "info",
+        title: "假期提醒",
+        message: "研发部有3名员工提交了下周的年假申请，待审批。",
+        time: "1天前",
+        read: true
+    }
+];
