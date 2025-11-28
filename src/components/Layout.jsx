@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { LayoutDashboard, Users, User, Settings, Bell, Search, LogOut, BarChart3, Moon, Sun } from 'lucide-react';
+import { LayoutDashboard, Users, User, Settings, Search, LogOut, BarChart3, Moon, Sun } from 'lucide-react';
+import Notification from './Notification';
+import { notifications } from '../data/mockData';
 
 const SidebarItem = ({ icon: Icon, label, active, onClick }) => (
     <div
@@ -96,10 +98,7 @@ const Layout = ({ children, activeTab, onTabChange }) => {
                             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
                         </button>
 
-                        <button style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', position: 'relative', padding: '0.5rem' }}>
-                            <Bell size={20} />
-                            <span style={{ position: 'absolute', top: 4, right: 4, width: 8, height: 8, background: 'var(--accent)', borderRadius: '50%', border: '2px solid var(--bg-panel)' }} />
-                        </button>
+                        <Notification notifications={notifications} />
 
                         <div className="user-menu">
                             <div style={{ textAlign: 'right', display: 'none' }} className="md-block">
